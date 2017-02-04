@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title>知乎日报</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="shouye">
+<header class="head" >
+    <a href="#/" class="logo"><img src="images/logo.png" alt=""></a>
+     
+</header>
+<div class="container">
+	<div class="left">
+		<h1>主题</h1>
+		<ul class="zt">
+			<li ng-repeat="v in data">
+				<a href="#/zhuti/{{v.id}}">{{v.name}}</a>
+			</li>
+		</ul>
+	</div>
+	<div class="right" ng-view>
+
+	</div>
+</div>
+</body>
+<script src="js/angular-1.4.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.5.0/angular-sanitize.min.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/index.js"></script>
+</html>

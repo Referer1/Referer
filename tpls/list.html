@@ -1,0 +1,8 @@
+<ul class="contentbox">
+    <li ng-repeat="v in data" class="contents">
+        <a href="#/show/{{v.id}}">
+            <img src="{{v.images[0]||mr}}" alt="">
+            <span>{{v.title}}</span>
+        </a>
+    </li>
+</ul>
